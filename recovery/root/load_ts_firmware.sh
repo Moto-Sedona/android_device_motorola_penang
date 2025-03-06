@@ -30,18 +30,18 @@ wait_for_poweron()
 cd $firmware_path
 touch_product_string=$(ls $touch_class_path)
 if [[ -d /sys/class/touchscreen/ft8057 ]]; then
-       echo "focaltech"
-       firmware_file="focaltech-csot-ft8057-05-0000-penang.bin"
-       touch_path=/sys$(cat $touch_class_path/$touch_product_string/path | tail -n 1)
-       wait_for_poweron
-       echo $firmware_file > $touch_path/doreflash
-       echo 1 > $touch_path/forcereflash
-       sleep 5
-       echo 1 > $touch_path/reset
+    echo "focaltech"
+    firmware_file="focaltech-csot-ft8057-05-0000-penang.bin"
+    touch_path=/sys$(cat $touch_class_path/$touch_product_string/path | tail -n 1)
+    wait_for_poweron
+    echo $firmware_file > $touch_path/doreflash
+    echo 1 > $touch_path/forcereflash
+    sleep 5
+    echo 1 > $touch_path/reset
 elif [[ -d /sys/class/touchscreen/NVT-ts ]]; then
-        echo "novatek"
-        cfirmware_file="novatek_ts_fw.bin"
-        echo 1 > /proc/nvt_update
+    echo "novatek"
+    firmware_file="novatek_ts_fw.bin"
+    echo 1 > /proc/nvt_update
 fi
 
 return 0

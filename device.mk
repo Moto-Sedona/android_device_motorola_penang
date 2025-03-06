@@ -117,6 +117,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci_SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/init.recovery.penang.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.penang.rc \
+    $(LOCAL_PATH)/recovery/root/load_ts_firmware.sh:$(TARGET_COPY_OUT_RECOVERY)/root/load_ts_firmware.sh
+
 # SKU
 # Variant Properties
 PRODUCT_COPY_FILES += \
