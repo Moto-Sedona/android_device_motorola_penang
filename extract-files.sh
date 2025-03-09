@@ -16,6 +16,10 @@ function blob_fixup() {
             [[ -z "${2}" ]] && return 0
             "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
+        vendor/lib64/sensors.moto.so)
+            [[ -z "${2}" ]] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         *)
             return 1
             ;;
