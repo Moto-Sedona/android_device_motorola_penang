@@ -26,6 +26,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=penang_g \
-    BuildDesc=$(call normalize-path-list, "penang_g-user 14 U1TPS34M.29-83-7-3-4 7757b release-keys")
-
-BUILD_FINGERPRINT := motorola/penang_g/penang:14/U1TPS34M.29-83-7-3-4/7757b:user/release-keys
+    BuildDesc=$(call normalize-path-list, "penang_g-user 14 U1TPS34M.29-83-7-3-4 7757b release-keys") \
+    BuildFingerprint="motorola/penang_g/penang:14/U1TPS34M.29-83-7-3-4/7757b:user/release-keys"
