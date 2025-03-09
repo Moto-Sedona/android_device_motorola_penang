@@ -36,17 +36,16 @@ PRODUCT_PACKAGES += \
     LineageSystemUIPenang \
     SettingsResPenang \
     NfcResPenang \
-    SystemUIResPenang \
-    RegulatoryInfoOverlayXT2335-5
+    SystemUIResPenang
 
+# Overlays (SKU)
 PRODUCT_PACKAGES += \
     FrameworksResPenangSB \
-    RegulatoryInfoOverlayXT2335-4
-
-PRODUCT_PACKAGES += \
     RegulatoryInfoOverlayXT2335-1 \
     RegulatoryInfoOverlayXT2335-2 \
-    RegulatoryInfoOverlayXT2335-3
+    RegulatoryInfoOverlayXT2335-3 \
+    RegulatoryInfoOverlayXT2335-4 \
+    RegulatoryInfoOverlayXT2335-5
 
 # Audio
 PRODUCT_COPY_FILES += \
