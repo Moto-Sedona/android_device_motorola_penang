@@ -14,7 +14,7 @@ TARGET_BOOTLOADER_BOARD_NAME := penang
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=penang
-TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig
+TARGET_KERNEL_CONFIG := vendor/penang_defconfig
 
 BOARD_KERNEL_BINARIES := kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
