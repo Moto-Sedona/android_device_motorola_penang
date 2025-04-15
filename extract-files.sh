@@ -10,6 +10,20 @@
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/libmotohid.so)
+            [[ -z "${2}" ]] && return 0
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+
+    return 0
+}
+
 function blob_fixup_dry() {
     blob_fixup "$1" ""
 }
